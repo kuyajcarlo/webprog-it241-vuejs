@@ -1,51 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>My first Vue page</title>
-  <link rel="stylesheet" href="css/style.css?version=0.1">">
+  <meta charset="UTF-8">
+  <title>My First Vue Page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-        <header> <h1>Personal Profile Web page </h1>  </header>
-        <main>
-          <section class="main-content">
-    <h2>MyProfile</h2>
-  </aside>
+  <header>
+    <h1>Personal Profile Web Page</h1>
+  </header>
 
-  <main class="content">
+  <main class="page">
+    <aside class="sidebar">
+      <h2>My Profile</h2>
+    </aside>
 
-    <section class="card">
-      <h2>About Me</h2>
-      <ul>
-        <li>BSIT Student</li>
-        <li>Aspiring Entrepreneur</li>
-        <li>Gamer & Tech Enthusiast</li>
-      </ul>
-    </section>
+    <main class="content">
+      <section class="card">
+        <h2>About Me</h2>
+        <ul>
+          <li>BSIT Student</li>
+          <li>Aspiring Entrepreneur</li>
+          <li>Gamer & Tech Enthusiast</li>
+        </ul>
+      </section>
 
-    <section class="card">
-      <h2>Skills</h2>
-      <ul>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>SQL</li>
-        <li>HTML & CSS</li>
-      </ul>
-    </section>
+      <section class="card">
+        <h2>Skills</h2>
+        <ul>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>HTML & CSS</li>
+        </ul>
+      </section>
 
-          </section>
-          <aside class="sidebar">
-            </aside>
-        </main>
-        <footer> Asia Pacific College   </footer>
+      <section class="card gallery">
+
+      </section>
+    </main>
+  </main>
+
+  <footer>Asia Pacific College</footer>
 </div>
-
 
 <div id="app">
   {{ message }}
 </div>
+
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script src="js/vue.js"></script>
+<script>
+  const app = Vue.createApp({
+    data() {
+      return {
+        message: 'Hello Vue!'
+      }
+    }
+  })
+  app.mount('#app')
+</script>
+
 </body>
 </html>
