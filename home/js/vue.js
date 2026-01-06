@@ -1,4 +1,4 @@
-  const app = Vue.createApp({
+const app = Vue.createApp({
    data() {
     return {
      message: "Merry Christmas and Happy New Year WEBPROG IT241!"
