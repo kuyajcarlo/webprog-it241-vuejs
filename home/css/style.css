@@ -19,7 +19,7 @@ body {
 }
 
 /* PAGE LAYOUT */
-.page {
+.page, .container {
   display: flex;
   min-height: 100vh;
   padding: 18px;        
@@ -97,9 +97,23 @@ body {
   border: 2px solid #8b0000;
 }
 
+/* HEADER & FOOTER */
+header, footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #160000;
+  border-radius: 10px;
+  border: 2px solid #8b0000;
+  margin-bottom: 10px;
+}
+
+header h1, footer {
+  color: #ff4d4d;
+}
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
-  .page {
+  .page, .container {
     flex-direction: column;
     align-items: center;
   }
