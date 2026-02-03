@@ -14,7 +14,6 @@
         </p>
 
         <img
-          src="@/assets/DSC00501.jpg"
           alt="John Carlo Baracena"
           class="profile-pic"
         />
