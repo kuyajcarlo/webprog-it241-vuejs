@@ -1,3 +1,5 @@
+import { createApp } from 'vue'
+
 import App from './App.vue'
 import Fooditem from './components/Fooditem.vue'
 import Fooditem2 from './components/Fooditem2.vue'
