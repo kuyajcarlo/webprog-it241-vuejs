@@ -25,3 +25,5 @@ export default {
     background-color: rgb(213, 237, 76);
   }
 
+
+</style>
