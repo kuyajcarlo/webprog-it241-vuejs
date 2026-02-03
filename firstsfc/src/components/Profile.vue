@@ -1,28 +1,43 @@
 <template>
-<div class="container">
-    <header> <h1>Personal Profile Web page </h1>  </header>
-    <main>
-      <section class="main-content">
-        <div>1 About Me</div>
-        <div> </div>
-        <div>2 Education / Achievements</div>
-        <div> </div>
-        <div>3 Course </div> 
-        <div> BSIT (Bachelor of Science in Information Technology)</div>
-        <div>4 IT Experience</div>
-        <div> T Experience: JavaScript, Python Programming, SQL </div>
-        <div>5 Hobbies & Interests</div>
-        <div>Interests: Gaming, Badminton, Cycling </div>
-        <div>6 Goals In Life / Dream</div>  
-        <div>Goal: Successful Entrepreneur </div>
-        <div>7 Picture Gallery</div>
-      </section>
-      <aside class="sidebar">
-        </aside>
-    </main>
-    <footer> Asia Pacific College   </footer>
+  <div>
+    <h1>Personal Profile Web Page</h1>
+
+    <div class="container">
+      <div class="about-section">
+        <h2>About Me</h2>
+
+        <p>
+          Course: BSIT (Bachelor of Science in Information Technology)<br>
+          IT Experience: JavaScript, Python Programming, SQL<br>
+          Interests: Gaming, Badminton, Cycling<br>
+          Goal: Successful Entrepreneur
+        </p>
+
+        <img
+          src="@/assets/DSC00501.jpg"
+          alt="John Carlo Baracena"
+          class="profile-pic"
+        />
+      </div>
+
+      <div class="gallery">
+        <h2>My Gallery</h2>
+
+        <iframe
+          src="https://assets.pinterest.com/ext/embed.html?id=2251868558892663"
+          height="550"
+          width="450">
+        </iframe>
+      </div>
+    </div>
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: "Profile"
+};
+</script>
+
+
 <style src="./css/personalprofile.css"></style>
