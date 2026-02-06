@@ -9,9 +9,9 @@ import Comment from './components/comment.vue'
 
 
 const app = createApp(App)
-app.component('personal-profile', PersonalProfile)
-app.component('food-item', FoodItem)
-app.component('food-item2', FoodItem2)
+app.component('personal-profile', Profile)
+app.component('food-item', Fooditem)
+app.component('food-item2', Fooditem2)
 app.component('comment-form', CommentForm)
-app.component('comment', Comment)
+app.component('comment', comment)
 app.mount('#app')
