@@ -1,12 +1,17 @@
 import { createApp } from 'vue'
 
 import App from './App.vue'
-import Fooditem from './components/Fooditem.vue'
-import Fooditem2 from './components/Fooditem2.vue'
-import Profile from './components/Profile.vue'
+import PersonalProfile from './components/PersonalProfile.vue'
+import FoodItem from './components/FoodItem.vue'
+import FoodItem2 from './components/FoodItem2.vue'
+import CommentForm from './components/CommentForm.vue'
+import Comment from './components/comment.vue'
+
 
 const app = createApp(App)
-app.component('food-item', Fooditem)
-app.component('food-item2', Fooditem2)
-app.component('profile', Profile)
+app.component('personal-profile', PersonalProfile)
+app.component('food-item', FoodItem)
+app.component('food-item2', FoodItem2)
+app.component('comment-form', CommentForm)
+app.component('comment', Comment)
 app.mount('#app')
