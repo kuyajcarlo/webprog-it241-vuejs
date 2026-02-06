@@ -2,6 +2,9 @@
 import { ref, onMounted } from 'vue'
 import { supabase } from './lib/supabaseClient'
 
+import CommentForm from './components/CommentForm.vue'
+import Comments from './components/Comments.vue'
+
 const instruments = ref([])
 
 async function getInstruments() {
@@ -10,7 +13,8 @@ async function getInstruments() {
     .select()
 
   if (error) {
-    console.error(error)
+    console.error('Error fetching instruments:', error)
+    instruments.value = []
     return
   }
 
@@ -23,11 +27,14 @@ onMounted(getInstruments)
 <template>
   <div>
     <h2>Instruments</h2>
+
     <ul>
       <li v-for="i in instruments" :key="i.id">
         {{ i.name }}
       </li>
     </ul>
+
+    <hr />
 
     <comment-form />
     <comments />
