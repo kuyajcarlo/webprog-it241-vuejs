@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 
 import App from './App.vue'
-import PersonalProfile from './components/PersonalProfile.vue'
+import PersonalProfile from './components/Profile.vue'
 import Fooditem from './components/Fooditem.vue'
 import Fooditem2 from './components/Fooditem2.vue'
 import CommentForm from './components/CommentForm.vue'
