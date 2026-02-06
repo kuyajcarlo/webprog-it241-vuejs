@@ -3,7 +3,6 @@ import { ref, onMounted } from 'vue'
 import { supabase } from './lib/supabaseClient'
 
 const instruments = ref([])
-const comments = ref([])
 
 async function getInstruments() {
   const { data, error } = await supabase
@@ -15,36 +14,22 @@ async function getInstruments() {
     return
   }
 
-  instruments.value = data
+  instruments.value = data ?? []
 }
 
-async function getComments() {
-  const { data, error } = await supabase
-    .from('comments')
-    .select()
-
-  if (error) {
-    console.error(error)
-    return
-  }
-
-  comments.value = data
-}
-
-onMounted(() => {
-  getInstruments()
-  getComments()
-})
+onMounted(getInstruments)
 </script>
 
 <template>
-  <ul>
-    <li v-for="instrument in instruments" :key="instrument.id">
-      {{ instrument.name }}
-    </li>
+  <div>
+    <h2>Instruments</h2>
+    <ul>
+      <li v-for="i in instruments" :key="i.id">
+        {{ i.name }}
+      </li>
+    </ul>
 
-    <li v-for="comment in comments" :key="comment.id">
-      {{ comment.name }}
-    </li>
-  </ul>
+    <comment-form />
+    <comments />
+  </div>
 </template>
