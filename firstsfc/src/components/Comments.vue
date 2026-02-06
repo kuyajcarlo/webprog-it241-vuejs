@@ -1,11 +1,14 @@
 <template>
   <div>
-    <h1>Comments</h1>
-    <ul>
+    <h2>Comments</h2>
+
+    <ul v-if="comments.length">
       <li v-for="c in comments" :key="c.id">
-        {{ c.name }}: {{ c.comment }}
+        <strong>{{ c.name }}</strong>: {{ c.comment }}
       </li>
     </ul>
+
+    <p v-else>No comments yet.</p>
   </div>
 </template>
 
@@ -19,14 +22,19 @@ async function getComments() {
   const { data, error } = await supabase
     .from('comments')
     .select()
+    .order('id', { ascending: false })
 
   if (error) {
-    console.error(error)
+    console.error('Error fetching comments:', error)
+    comments.value = []
     return
   }
 
+  // ⭐ THIS LINE FIXES YOUR ISSUE
   comments.value = data ?? []
 }
 
-onMounted(getComments)
+onMounted(() => {
+  getComments()
+})
 </script>
