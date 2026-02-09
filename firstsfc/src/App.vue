@@ -36,6 +36,11 @@ onMounted(getInstruments)
 
     <hr />
 
+    <!-- ✅ REST API COMPONENT ADDED -->
+    <rest-api />
+
+    <hr />
+
     <comment-form />
     <comments />
   </div>
