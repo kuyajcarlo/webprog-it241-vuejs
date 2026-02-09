@@ -34,12 +34,16 @@ onMounted(getInstruments)
       </li>
     </ul>
 
-    <hr />
+<hr />
 
-    <!-- ✅ REST API COMPONENT ADDED -->
-    <rest-api />
+<!-- ✅ REST API COMPONENT ADDED -->
+<div style="border: 2px solid red; padding: 10px;">
+  <p>Before RestApi component</p>
+  <rest-api />
+  <p>After RestApi component</p>
+</div>
 
-    <hr />
+<hr />
 
     <comment-form />
     <comments />
